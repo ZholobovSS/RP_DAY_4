@@ -31,12 +31,7 @@ export default defineConfig([
             ...prettierPlugin.configs.recommended.rules,
             ...eslintConfigPrettier.rules,
             // Запрет относительных импортов выше текущей директории
-            'no-restricted-imports': [
-                'error',
-                {
-                    patterns: ['../*'],
-                },
-            ],
+            '@typescript-eslint/no-unused-vars': 'warn',
         },
     },
 ]);

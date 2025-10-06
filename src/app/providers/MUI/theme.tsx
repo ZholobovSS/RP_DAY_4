@@ -11,12 +11,9 @@ const LinkBehavior = forwardRef<HTMLAnchorElement, Omit<NavRouterLinkProps, 'to'
         const { href, style, ...other } = props;
         const theme = useTheme();
 
-        console.log({ other });
-
         return (
             <NavRouterLink
                 style={({ isActive }) => {
-                    console.log({ isActive });
                     return {
                         ...style,
                         color: isActive ? theme.palette.warning.main : theme.palette.primary.main,
